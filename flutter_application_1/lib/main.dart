@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home/home_screen.dart';
-import 'package:flutter_application_1/pages/list_categorie/categorie_screen.dart';
 import 'package:flutter_application_1/pages/splash/splash_screen.dart';
 import 'package:flutter_application_1/share/theme/theme.dart';
 
@@ -17,8 +16,7 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashScreen.routeName,
       routes: {
         SplashScreen.routeName : (context)=>SplashScreen(),
-        HomeScreen.routeName :(context)=> HomeScreen(),
-        CategorieScreen.routName :(context)=>CategorieScreen(),
+        HomeScreen.routeName: (context)=>HomeScreen()
       },
     );
   }

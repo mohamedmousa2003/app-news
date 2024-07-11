@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constans/constatan.dart';
+import 'package:flutter_application_1/share/constatan.dart';
 import 'package:flutter_application_1/models/category/my_category%20.dart';
 import 'package:flutter_application_1/pages/home/widget/custom_container.dart';
 import 'package:flutter_application_1/pages/home/widget/custom_drawer.dart';
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       )
-      : const CategorieScreen(),
+      :  CategorieScreen(myCategory: selectedCategorie!,),
     );
   }
 
@@ -65,17 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   onCategorieIteam(MyCategory categorie){
     selectedCategorie = categorie;
-    setState(() {
-      
-    });
+    setState(() {});
   }
 
   onDrawerClick(){
     selectedCategorie =null;
     Navigator.pop(context);
-    setState(() {
-      
-    });
+    setState(() {});
   }
 }
 

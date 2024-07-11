@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/constans/constatan.dart';
+import 'package:flutter_application_1/share/constatan.dart';
 import 'package:flutter_application_1/pages/home/home_screen.dart';
 import 'package:flutter_application_1/share/cores/colors.dart';
 
