@@ -8,3 +8,5 @@ const Color yellow =Color(0xffF2D352);
 const Color blue =Color(0xff4882CF);
 const Color blueDark =Color (0xff003E90);
 const Color pink = Color(0xffED1E79);
+const Color transparent =Colors.transparent;
+const Color black =Color(0xff42505C);

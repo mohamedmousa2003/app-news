@@ -23,9 +23,9 @@ class MyCategory {
         image: "assets/images/sports.png",
       ),
       MyCategory(
-        id: politics.toLowerCase(),
+        id: general.toLowerCase(),
         color: blueDark,
-        title: politics,
+        title: general,
         image: "assets/images/Politics.png",
       ),
       MyCategory(
@@ -41,9 +41,9 @@ class MyCategory {
         image: "assets/images/business.png",
       ),
       MyCategory(
-        id: enviroment.toLowerCase(),
+        id: entertainment.toLowerCase(),
         color: blue,
-        title: enviroment,
+        title: entertainment,
         image: "assets/images/environment.png",
       ),
       MyCategory(

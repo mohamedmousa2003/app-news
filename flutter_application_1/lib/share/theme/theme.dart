@@ -7,7 +7,7 @@ class ApplicationTheme {
       backgroundColor: primary,
       centerTitle: true,
       elevation: 0,
-      toolbarHeight: 65,
+      toolbarHeight: 50,
       shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(42),
@@ -31,6 +31,14 @@ class ApplicationTheme {
     fontWeight: FontWeight.bold,
       color: white,
     ),
+    bodySmall: TextStyle(
+      fontSize: 18,
+    fontWeight: FontWeight.bold,
+    ),
+    titleSmall: TextStyle(
+      color: white,
+      fontSize: 14,
+    )
   )
   );
 }

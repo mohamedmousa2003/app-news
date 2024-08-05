@@ -4,6 +4,7 @@ import 'package:flutter_application_1/models/category/my_category%20.dart';
 import 'package:flutter_application_1/pages/home/widget/custom_container.dart';
 import 'package:flutter_application_1/pages/home/widget/custom_drawer.dart';
 import 'package:flutter_application_1/pages/list_categorie/categorie_screen.dart';
+import 'package:flutter_application_1/share/cores/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key,});
@@ -26,23 +27,23 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           selectedCategorie == null ? "newsApp" : selectedCategorie?.title ?? "", style: theme.textTheme.bodyMedium,),
       ),
-      body: selectedCategorie ==null? 
+      body: selectedCategorie ==null?
       Padding(
         padding: const EdgeInsets.only(top: 30.0, left: 8, right: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(titleHome ,style: theme.textTheme.bodyMedium?.copyWith(color:const Color(0xff4F5A69),),),
-            
+
             Expanded(
               child: GridView.builder(
                 padding: const EdgeInsets.all(20),
                 itemCount: MyCategory.categories.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 20,
                   crossAxisSpacing: 20,
-                  childAspectRatio: 9/11,//  width / height
+                  childAspectRatio: MediaQuery.of(context).size.width*1/ MediaQuery.of(context).size.height*1.6,//  width / height
                   ),
                 itemBuilder: (context, index){
                    final categories = MyCategory.categories[index];
@@ -51,16 +52,15 @@ class _HomeScreenState extends State<HomeScreen> {
                      onTap: onCategorieIteam,
                      index: index,
                      );
-                } 
+                }
               ),
             )
           ],
         ),
       )
-      :  CategorieScreen(myCategory: selectedCategorie!,),
+      :  CategoricScreen(myCategory: selectedCategorie!,),
     );
   }
-
   MyCategory? selectedCategorie;
 
   onCategorieIteam(MyCategory categorie){
