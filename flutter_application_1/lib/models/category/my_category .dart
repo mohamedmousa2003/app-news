@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/share/constatan.dart';
 import 'package:flutter_application_1/share/cores/colors.dart';
 
+import '../../generated/l10n.dart';
+
 class MyCategory {
   String ? id;
   String ? title ;
@@ -15,42 +17,49 @@ class MyCategory {
     required this.image,
     });
 
-    static List<MyCategory> categories = [
+    static List<MyCategory> getCategories(BuildContext context) {
+    return [
       MyCategory(
         id: sport.toLowerCase(),
         color: red,
-        title: sport,
+        title: S.of(context).sport,
         image: "assets/images/sports.png",
       ),
       MyCategory(
         id: general.toLowerCase(),
         color: blueDark,
-        title: general,
+        title: S.of(context).general,
         image: "assets/images/Politics.png",
       ),
       MyCategory(
         id: health.toLowerCase(),
         color: pink,
-        title: health,
+        title: S.of(context).health,
         image: "assets/images/health.png",
       ),
       MyCategory(
         id: business.toLowerCase(),
         color: yellowDark,
-        title: business,
+        title: S.of(context).business,
         image: "assets/images/business.png",
       ),
       MyCategory(
         id: entertainment.toLowerCase(),
         color: blue,
-        title: entertainment,
+        title: S.of(context).entertainment,
         image: "assets/images/environment.png",
       ),
       MyCategory(
         id: science.toLowerCase(),
         color: yellow,
-        title: science,
+        title: S.of(context).science,
         image: "assets/images/science.png",
       ),
     ];
+  }
 }
+
+
+/*
+business entertainment general health science sports technology
+*/

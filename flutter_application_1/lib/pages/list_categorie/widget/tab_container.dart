@@ -31,7 +31,7 @@ class _TabContainerState extends State<TabContainer> {
               });
             },
             isScrollable: true,
-            dividerColor: transparent,
+          dividerColor: transparent,
             indicatorColor: transparent,
             tabs: widget.sourcesList
                 .map((e) => TabItem(

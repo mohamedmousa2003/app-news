@@ -17,7 +17,7 @@ class ApplicationTheme {
     
    iconTheme: IconThemeData(color: white),
   ),
-
+    scaffoldBackgroundColor: transparent,
   drawerTheme: DrawerThemeData(
     
   ),
